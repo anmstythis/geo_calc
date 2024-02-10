@@ -6,7 +6,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         double distance; //объявление переменной для расстояния
-        final double EarthRadius = 6371; //радиус Земли в километрах
+        final double EARTH_RADIUS = 6371; //радиус Земли в километрах
         final double PI = 3.14159265; //число пи
         double lat1, lat2; //переменные для широты
         double lon1, lon2; //переменные для долготы
@@ -59,7 +59,7 @@ public class Main {
                 (PI / 180)) + Math.cos(lat1 * (PI / 180)) * Math.cos(lat2 * (PI / 180)) *
                 Math.cos((lon1 - lon2) * (PI / 180)); //счет числа, от которого нужно будет вычислить арккосинус
         double rez = Math.acos(arez); //счет арккосинуса
-        distance = EarthRadius * rez; //конечный счет расстояния
+        distance = EARTH_RADIUS * rez; //конечный счет расстояния
 
         System.out.println("Расстояние: " + distance + "км."); //вывод результата
     }

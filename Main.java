@@ -57,9 +57,9 @@ public class Main {
 
         double arez = Math.sin(lat1 * (PI / 180)) * Math.sin(lat2 *
                 (PI / 180)) + Math.cos(lat1 * (PI / 180)) * Math.cos(lat2 * (PI / 180)) *
-                Math.cos((lon1 - lon2) * (PI / 180));
-        double rez = Math.acos(arez);
-        distance = EarthRadius * rez;
+                Math.cos((lon1 - lon2) * (PI / 180)); //счет числа, от которого нужно будет вычислить арккосинус
+        double rez = Math.acos(arez); //счет арккосинуса
+        distance = EarthRadius * rez; //конечный счет расстояния
 
         System.out.println("Расстояние: " + distance + "км."); //вывод результата
     }
